@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: default/daas-platform-idp
+  description: Team A
+spec:
+  type: team
+  profile:
+    # Intentional no displayName for testing
+    email: daas-platform-idp@knauf.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: backstage
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: default/ext_soeldneg
+spec:
+  profile:
+    # Intentional no displayName for testing
+    email: EXT_SoeldneG@knauf.com
+    picture: https://api.dicebear.com/7.x/avataaars/svg?seed=Luna&backgroundColor=transparent
+  memberOf: [default/daas-platform-idp]
